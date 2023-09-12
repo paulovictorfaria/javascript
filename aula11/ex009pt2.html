@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacionalidade</title>
+</head>
+<body>
+  <h1>Qual país você mora?</h1>
+  <input type="text" name="txtnal" id="txtnal">
+  <input type="button" value="Enter" onclick="nacionalidade()">
+  <div id="res"></div>
+
+<script>
+  function nacionalidade(){
+    var país = window.document.querySelector('#txtnal')
+    var res = window.document.querySelector('#res')
+    var local = país.value
+    res.innerHTML = `Vivendo em ${local}`
+
+    if( local === 'Brasil'){
+      res.innerHTML += `<p>Voce é brasileiro</p>`
+    }else{
+      res.innerHTML += `<p>Você é estrangeiro</p>`
+    }
+  }
+</script>
+</body>
+</html>
